@@ -4,7 +4,7 @@ public class CheckingClass {
 
     public static void main(String[] args) {
         GraphImplementation graphImplementation = new GraphImplementation(5);
-        graphImplementation.AddEdges( 0, 1);
+        graphImplementation.AddEdges( 0, 1); // u is the current vertex and v is the adjacent vertex
         graphImplementation.AddEdges( 0, 4);
         graphImplementation.AddEdges( 1, 2);
         graphImplementation.AddEdges( 1, 3);
