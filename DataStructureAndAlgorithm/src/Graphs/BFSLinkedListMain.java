@@ -1,6 +1,7 @@
 package Graphs;
 
 import java.util.LinkedList;
+import static Graphs.GraphUtils.developUndirectedGraph;
 
 public class BFSLinkedListMain {
 
@@ -14,18 +15,18 @@ public class BFSLinkedListMain {
         }
 
         // adding edges to the graph
-        developUndirectedGraph(1, 2);
-        developUndirectedGraph(1, 4);
-        developUndirectedGraph(2, 3);
-        developUndirectedGraph(2, 5);
-        developUndirectedGraph(3, 6);
-        developUndirectedGraph(3, 10);
-        developUndirectedGraph(4, 7);
-        developUndirectedGraph(5, 8);
-        developUndirectedGraph(6, 9);
-        developUndirectedGraph(7, 8);
-        developUndirectedGraph(8, 9);
-        developUndirectedGraph(9, 10);
+        developUndirectedGraph(nodeList, 1, 2);
+        developUndirectedGraph(nodeList, 1, 4);
+        developUndirectedGraph(nodeList, 2, 3);
+        developUndirectedGraph(nodeList, 2, 5);
+        developUndirectedGraph(nodeList, 3, 6);
+        developUndirectedGraph(nodeList, 3, 10);
+        developUndirectedGraph(nodeList, 4, 7);
+        developUndirectedGraph(nodeList, 5, 8);
+        developUndirectedGraph(nodeList, 6, 9);
+        developUndirectedGraph(nodeList, 7, 8);
+        developUndirectedGraph(nodeList, 8, 9);
+        developUndirectedGraph(nodeList, 9, 10);
 
         // Ouput :
         //0V
@@ -41,20 +42,6 @@ public class BFSLinkedListMain {
         for (GraphNode graphNode : nodeList)
             if (!graphNode.isVisited())
                 BFSLinkedList.perfromBreadthFirstSearch(graphNode);
-
-
     }
 
-    /**
-     * Adds the neighbour in the graph
-     *
-     * @param i
-     * @param j
-     */
-    private static void developUndirectedGraph(int i, int j) {
-        GraphNode firstNode = nodeList.get(i - 1);
-        GraphNode secondNode = nodeList.get(j - 1);
-        firstNode.getNeighbours().add(secondNode);
-        secondNode.getNeighbours().add(firstNode);
-    }
 }
