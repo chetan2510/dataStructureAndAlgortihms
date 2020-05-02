@@ -9,7 +9,7 @@ public class DFSLinkedListMain {
 
     public static void main(String[] args) {
 
-        // cresting 10 nodes
+        // creating 10 nodes
         for(int i = 0; i< 10; i++) {
             nodeList.add(new GraphNode(i+"V"));
         }
@@ -28,7 +28,18 @@ public class DFSLinkedListMain {
         developUndirectedGraph(nodeList, 8, 9);
         developUndirectedGraph(nodeList, 9, 10);
 
-
+        // *** Time complexity : O(V + E) ***
+        // *** Space complexity : O(V + E) ***
+//        0V
+//        1V
+//        2V
+//        5V
+//        8V
+//        7V
+//        4V
+//        6V
+//        3V
+//        9V
         // Output:
         //0V
         //3V
@@ -45,7 +56,8 @@ public class DFSLinkedListMain {
             if(!graphNode.isVisited()) {
 
                 // connected ones will be taken care in this method only
-                DFSLinkedList.performDFS(graphNode);
+               // DFSLinkedList.performDFS(graphNode);
+                DFSLinkedList.performDFSRecursive(graphNode);
             }
         }
     }

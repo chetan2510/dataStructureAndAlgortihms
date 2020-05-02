@@ -14,9 +14,9 @@ public class BFSLinkedList {
 
         LinkedList<GraphNode> queue = new LinkedList<>();
         queue.add(node);
+        node.setVisited(true);
         while (!queue.isEmpty()) {
             GraphNode currentNode = queue.remove(0);
-            currentNode.setVisited(true);
             System.out.println(currentNode.getName());
             for (GraphNode graphNode : currentNode.getNeighbours()) {
                 if (!graphNode.isVisited()) {
