@@ -10,8 +10,11 @@ public class BFSAsASingleShortestPathMain {
 
     private static LinkedList<GraphNode> nodeList = new LinkedList<>();
 
-    public static void main(String[] args) {
+    public boolean isBadVersion(int num) {
+        return true;
+    }
 
+    public static void main(String[] args) {
         // can make this dynamic but for now let it be like that
         for (int i = 0; i < 10; i++) {
             nodeList.add(new GraphNode(i + "V"));
@@ -31,6 +34,8 @@ public class BFSAsASingleShortestPathMain {
         developUndirectedGraph(nodeList,8,7);
         developUndirectedGraph(nodeList,6,7);
 
+        // Time complexity : O(E) as we are sure graph is connected
+        // Space complexity : O(E)
         // Setting the parent for the graph taking 2 as the source
         BFSAsASingleShortestPath.setparentInTheGraph(nodeList.get(2));
         BFSAsASingleShortestPath.getPath(nodeList.get(9));
