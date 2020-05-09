@@ -27,9 +27,6 @@ public class DijkstraMain {
 
         // printing the nodes taking source as E
         performDijkstra(nodeList.get(4));
-
-
-
     }
 
 
