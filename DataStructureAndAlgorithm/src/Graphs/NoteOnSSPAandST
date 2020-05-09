@@ -1,0 +1,3 @@
+The main difference between minimum spanning tree and single shortest path algorithm is that in single shortest path we
+try to find shortest path from source to destination whereas in SpanningTree our intention is to connect all the vertices
+together weights does not matter
