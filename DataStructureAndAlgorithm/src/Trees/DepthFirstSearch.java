@@ -1,6 +1,8 @@
 package Trees;
 
-
+/**
+ * We traverse depth wise
+ */
 public class DepthFirstSearch {
 
     /**
