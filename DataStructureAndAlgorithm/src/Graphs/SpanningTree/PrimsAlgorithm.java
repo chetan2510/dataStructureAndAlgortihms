@@ -57,6 +57,9 @@ public class PrimsAlgorithm {
         while(!queue.isEmpty()) {
            WeightNode presentedNode = queue.poll();
            for(WeightNode neighbour : presentedNode.getNeighbours()) {
+
+               // This if condition is a main difference between dijkstra and prims
+               // NOTE: we are noting adding the distance of current node ;)
                if(neighbour.getDistance() > presentedNode.getWeightMap().get(neighbour)) {
                    neighbour.setDistance(presentedNode.getWeightMap().get(neighbour));
                    neighbour.setParent(presentedNode);
