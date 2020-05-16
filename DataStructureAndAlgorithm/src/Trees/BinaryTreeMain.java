@@ -8,6 +8,8 @@ public class BinaryTreeMain {
     private static BinaryTree binaryTree;
 
     public static void main(String[] args) {
+
+        // Object of binary node
         BinaryNode root = new BinaryNode();
         root.setValue(20);
         binaryTree = new BinaryTree(root);
@@ -18,6 +20,8 @@ public class BinaryTreeMain {
         binaryTree.insert(250);
         binaryTree.insert(35);
         binaryTree.insert(222);
+
+        // for depth first search
         DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
         depthFirstSearch.preOrderTraversal(root);
         System.out.println();
