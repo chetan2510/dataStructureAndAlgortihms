@@ -13,7 +13,8 @@ public class BinaryTreeMain {
     private static BinaryTree binaryTree;
 
     public static void main(String[] args) {
-        
+
+        // Object of binary node
         BinaryNode root = new BinaryNode();
         root.setValue(20);
         binaryTree = new BinaryTree(root);
