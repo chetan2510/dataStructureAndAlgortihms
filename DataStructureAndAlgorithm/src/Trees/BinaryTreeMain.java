@@ -19,9 +19,6 @@ public class BinaryTreeMain {
         root.setValue(20);
         binaryTree = new BinaryTree(root);
         binaryTree.insert(100);
-
-
-
         
         binaryTree.insert(3);
         binaryTree.insert(50);
